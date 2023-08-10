@@ -7,6 +7,11 @@
  */
 int main(void)
 {
+#ifdef __x86_64__
+printf("Running on a 64-bit machine\n");
+#else
+printf("Running on a 32-bit machine\n");
+#endif
 printf("Size of char: %zu byte(s)\n", sizeof(char));
 printf("Size of short int: %zu byte(s)\n", sizeof(short int));
 printf("Size of int: %zu byte(s)\n", sizeof(int));
