@@ -1,12 +1,16 @@
-#include <stdio.h>
-#include <unstd.h>
+#include <unistd.h>
+
 /**
- * A program that prints a line to the standard error
+ * main - Entry point
  *
- * Return: 1 (success)
+ * Description: Prints a specific quote to the standard error.
+ *
+ * Return: Always 1 (Error code)
  */
 int main(void)
 {
-        fput("and that piece of art is useful\" - Dora Korpar, 2015-10-19\", stdout);
-        return (1);
+    write(2,
+        "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n",
+        59);
+    return (1);
 }
