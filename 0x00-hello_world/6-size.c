@@ -7,11 +7,11 @@
  */
 int main(void)
 {
-#ifdef __x86_64__
-printf("Running on a 64-bit machine\n");
-#else
-printf("Running on a 32-bit machine\n");
-#endif
+	char a;
+	int b;
+	long int c;
+	long long int d;
+	float f;
 printf("Size of char: %lu byte(s)\n", sizeof(char));
 printf("Size of short int: %lu byte(s)\n", sizeof(short int));
 printf("Size of int: %lu byte(s)\n", sizeof(int));
