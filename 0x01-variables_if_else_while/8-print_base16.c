@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main -Pro  Entry point
+ * main -Prog  Entry point
  *
  * Return: Always 0 (Success)
  */
@@ -8,17 +8,14 @@ int main(void)
 {
 int d;
 char c;
-
-d = '0';
-c = 'a';
-
-while
-(d < 10)
+for (d = 0; d < 10; d++)
 {
 putchar(d + '0');
 d++;
 }
+
 while
+
 (c <= 'f')
 {
 putchar(c);
