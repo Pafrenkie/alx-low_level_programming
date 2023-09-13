@@ -1,16 +1,16 @@
-#include <stddef.h>
+#include "function_pointers.h"
+#include <stdio.h>
 
-/* Prototype of the _putchar function */
-int _putchar(char c);
+/* Prototype of the _putchar function 
+ *
+ * @name: string to add
+ * @f: pointer to function
+ * Return: nothing
+ * */
 
-
-typedef void (*print_func)(char *);
-
-
-void print_name(char *name, print_func f)
+void print_name(char *name, void (*f)(char *));
 {
-if (name != NULL && f != NULL)
-{
+if (name == NULL || f == NULL)
+return;
 f(name);
-}
 }
